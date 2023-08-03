@@ -1,5 +1,6 @@
 package com.springMVC.app;
 
+import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 
 import org.springframework.stereotype.Controller;
@@ -21,7 +22,7 @@ public class RegisterController {
 //	@RequestMapping(value="/register/save", method=RequestMethod.POST) // 신규회원 가입
 // 	@PostMapping("/register/save")
 	@PostMapping("/register/add")
-	public String save(@ModelAttribute("user") User user, Model m) {
+	public String save(@ModelAttribute("user") User user, Model m) throws UnsupportedEncodingException {
 		if(!isValid(user)) {
 			String msg = URLEncoder.encode("id를 잘못입력하셨습니다.", "utf-8");
 			
