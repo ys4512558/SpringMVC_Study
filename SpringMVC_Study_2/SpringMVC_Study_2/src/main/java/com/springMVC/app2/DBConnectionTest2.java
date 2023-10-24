@@ -25,6 +25,7 @@ public class DBConnectionTest2 {
         ds.setPassword(DB_PASSWORD);
          */
 
+
         ApplicationContext ac = new GenericXmlApplicationContext("file:src/main/webapp/WEB-INF/spring/**/root-context.xml");
         DataSource ds = ac.getBean(DataSource.class);
 
